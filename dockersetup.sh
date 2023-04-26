@@ -34,8 +34,14 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
  sudo usermod -aG docker $USER
  newgrp docker
  
- 
- 
+
+#add run service 
+
+service --status-all
+sleep 10
+service docker start
+sleep 5
+service docker status
  
  
  docker volume create portainer_data
